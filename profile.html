@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروفایل کاربری - شبیه‌ساز مشاغل</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">شبیه‌ساز مشاغل</h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            <!-- آیکون کاربر -->
+            <div class="user-panel">
+                <a href="profile.html" id="userAccount">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش پروفایل -->
+    <section class="profile">
+        <div class="container">
+            <h2 class="profile-title">پروفایل کاربری</h2>
+            <div class="profile-content">
+                <!-- اطلاعات کاربر -->
+                <div class="profile-info">
+                    <div class="profile-picture">
+                        <img src="images/default-avatar.png" alt="عکس پروفایل" id="profileImage">
+                        <input type="file" id="uploadImage" accept="image/*" style="display: none;">
+                        <button id="changeImage" class="edit-button">تغییر عکس</button>
+                    </div>
+                    <p><strong>نام:</strong> <span id="profileName">نام کاربر</span></p>
+                    <p><strong>ایمیل:</strong> <span id="profileEmail">ایمیل کاربر</span></p>
+                    <p><strong>تاریخ ثبت‌نام:</strong> <span id="profileDate">تاریخ ثبت‌نام</span></p>
+                    <p><strong>امتیاز:</strong> <span id="profileScore">100 امتیاز</span></p>
+                </div>
+                <!-- دکمه ویرایش اطلاعات -->
+                <button id="editProfile" class="edit-button">ویرایش اطلاعات</button>
+                <!-- فرم ویرایش اطلاعات -->
+                <form id="editForm" class="edit-form" style="display: none;">
+                    <label for="editName">نام:</label>
+                    <input type="text" id="editName" name="editName" required>
+
+                    <label for="editEmail">ایمیل:</label>
+                    <input type="email" id="editEmail" name="editEmail" required>
+
+                    <button type="submit" class="save-button">ذخیره تغییرات</button>
+                </form>
+                <!-- تغییر رمز عبور -->
+                <div class="change-password">
+                    <h3>تغییر رمز عبور</h3>
+                    <form id="changePasswordForm">
+                        <label for="currentPassword">رمز عبور فعلی:</label>
+                        <input type="password" id="currentPassword" name="currentPassword" required>
+
+                        <label for="newPassword">رمز عبور جدید:</label>
+                        <input type="password" id="newPassword" name="newPassword" required>
+
+                        <label for="confirmPassword">تأیید رمز عبور جدید:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                        <button type="submit" class="save-button">تغییر رمز عبور</button>
+                    </form>
+                </div>
+                <!-- تاریخچه فعالیت‌ها -->
+                <div class="activity-history">
+                    <h3>تاریخچه فعالیت‌ها</h3>
+                    <ul id="activityList">
+                        <li>تست شغل برنامه‌نویسی - امتیاز: ۸۵</li>
+                        <li>تست شغل طراحی گرافیک - امتیاز: ۹۰</li>
+                    </ul>
+                </div>
+                <!-- حذف حساب کاربری -->
+                <div class="delete-account">
+                    <button id="deleteAccount" class="delete-button">حذف حساب کاربری</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // اطلاعات کاربر از localStorage دریافت می‌شود
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        // نمایش اطلاعات کاربر در صفحه
+        if (user) {
+            document.getElementById('profileName').textContent = user.name;
+            document.getElementById('profileEmail').textContent = user.email;
+            document.getElementById('profileDate').textContent = new Date().toLocaleDateString('fa-IR');
+        }
+
+        // نمایش فرم ویرایش اطلاعات
+        const editButton = document.getElementById('editProfile');
+        const editForm = document.getElementById('editForm');
+
+        editButton.addEventListener('click', () => {
+            editForm.style.display = 'block';
+            editButton.style.display = 'none';
+        });
+
+        // ذخیره تغییرات
+        editForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const newName = document.getElementById('editName').value;
+            const newEmail = document.getElementById('editEmail').value;
+
+            // به‌روزرسانی اطلاعات کاربر
+            user.name = newName;
+            user.email = newEmail;
+            localStorage.setItem('user', JSON.stringify(user));
+
+            // به‌روزرسانی اطلاعات در صفحه
+            document.getElementById('profileName').textContent = newName;
+            document.getElementById('profileEmail').textContent = newEmail;
+
+            // مخفی کردن فرم ویرایش
+            editForm.style.display = 'none';
+            editButton.style.display = 'block';
+        });
+
+        // تغییر عکس پروفایل
+        const changeImageButton = document.getElementById('changeImage');
+        const uploadImageInput = document.getElementById('uploadImage');
+        const profileImage = document.getElementById('profileImage');
+
+        changeImageButton.addEventListener('click', () => {
+            uploadImageInput.click();
+        });
+
+        uploadImageInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    profileImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // تغییر رمز عبور
+        const changePasswordForm = document.getElementById('changePasswordForm');
+
+        changePasswordForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const currentPassword = document.getElementById('currentPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (newPassword !== confirmPassword) {
+                alert("رمز عبور جدید و تأیید آن مطابقت ندارند!");
+                return;
+            }
+
+            // بررسی رمز عبور فعلی (این بخش باید با سرور چک شود)
+            if (currentPassword === user.password) {
+                user.password = newPassword;
+                localStorage.setItem('user', JSON.stringify(user));
+                alert("رمز عبور با موفقیت تغییر کرد!");
+            } else {
+                alert("رمز عبور فعلی نادرست است!");
+            }
+        });
+
+        // حذف حساب کاربری
+        const deleteAccountButton = document.getElementById('deleteAccount');
+
+        deleteAccountButton.addEventListener('click', () => {
+            if (confirm("آیا مطمئن هستید که می‌خواهید حساب کاربری خود را حذف کنید؟ این عمل غیرقابل بازگشت است!")) {
+                localStorage.removeItem('user');
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+</html>

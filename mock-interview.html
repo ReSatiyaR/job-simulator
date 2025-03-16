@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مصاحبه شغلی - مهندس نرم‌افزار</title>
+    <link rel="stylesheet" href="css/mock-interview.css">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">شبیه‌ساز مشاغل</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش مصاحبه شغلی -->
+    <section class="interview">
+        <div class="container">
+            <h2 class="interview-title">مصاحبه شغلی شبیه‌سازی شده</h2>
+            <div class="interview-content">
+                <p>به مصاحبه شغلی برای موقعیت مهندس نرم‌افزار خوش آمدید. لطفاً به سؤالات زیر پاسخ دهید:</p>
+                <div class="question">
+                    <h3>سوال ۱: تجربه‌ی شما در زمینه برنامه‌نویسی چیست؟</h3>
+                    <textarea id="answer1" rows="3" placeholder="پاسخ خود را اینجا بنویسید..."></textarea>
+                </div>
+                <div class="question">
+                    <h3>سوال ۲: چگونه با چالش‌های فنی روبرو می‌شوید؟</h3>
+                    <textarea id="answer2" rows="3" placeholder="پاسخ خود را اینجا بنویسید..."></textarea>
+                </div>
+                <button id="submitInterview" class="interview-button">ارسال پاسخ‌ها</button>
+                <pre id="interviewFeedback"></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ارسال پاسخ‌های مصاحبه
+        document.getElementById('submitInterview').addEventListener('click', () => {
+            const answer1 = document.getElementById('answer1').value;
+            const answer2 = document.getElementById('answer2').value;
+
+            if (answer1.trim() && answer2.trim()) {
+                document.getElementById('interviewFeedback').textContent = "پاسخ‌های شما با موفقیت ثبت شدند!";
+            } else {
+                document.getElementById('interviewFeedback').textContent = "لطفاً به تمام سؤالات پاسخ دهید.";
+            }
+        });
+    </script>
+</body>
+</html>

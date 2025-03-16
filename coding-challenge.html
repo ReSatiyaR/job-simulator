@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>چالش کدنویسی - مهندس نرم‌افزار</title>
+    <link rel="stylesheet" href="css/coding-challenge.css">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">شبیه‌ساز مشاغل</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش چالش کدنویسی -->
+    <section class="challenge">
+        <div class="container">
+            <h2 class="challenge-title">چالش کدنویسی: پیدا کردن بزرگ‌ترین عدد</h2>
+            <div class="challenge-content">
+                <p>تابعی بنویسید که یک آرایه از اعداد را دریافت کرده و بزرگ‌ترین عدد را برگرداند.</p>
+                <textarea id="challengeCode" rows="5" placeholder="کد خود را اینجا بنویسید..."></textarea>
+                <button id="runChallenge" class="challenge-button">اجرای کد</button>
+                <pre id="challengeOutput"></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // اجرای چالش کدنویسی
+        document.getElementById('runChallenge').addEventListener('click', () => {
+            const code = document.getElementById('challengeCode').value;
+            try {
+                const findMax = eval(`(${code})`); // تبدیل کد به تابع
+                const testArray = [3, 7, 2, 9, 5];
+                const result = findMax(testArray);
+                if (result === 9) {
+                    document.getElementById('challengeOutput').textContent = "تبریک! چالش با موفقیت حل شد.";
+                } else {
+                    document.getElementById('challengeOutput').textContent = "چالش حل نشد. دوباره تلاش کنید!";
+                }
+            } catch (error) {
+                document.getElementById('challengeOutput').textContent = `خطا: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

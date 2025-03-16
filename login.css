@@ -1,0 +1,167 @@
+/* تنظیمات کلی */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    color: #2d3748;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 700;
+}
+
+p, a, button {
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+/* هدر */
+.header {
+    background: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    margin-bottom: 1rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3182ce;
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.nav-link {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #2d3748;
+}
+
+/* بخش فرم‌ها */
+.simulation {
+    padding: 4rem 0;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.simulation-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+    text-align: center;
+}
+
+.simulation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.5rem;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+form button {
+    background: #3182ce;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background: #2c5282;
+}
+
+#signup-result,
+#login-result,
+#profile-info {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #4a5568;
+    text-align: center;
+}
+
+/* فوتر */
+.footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+
+
+
+/* استایل لینک‌های پایین فرم ورود */
+.login-links {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.login-link {
+    display: block;
+    color: #3182ce;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.login-link:hover {
+    color: #2c5282;
+}

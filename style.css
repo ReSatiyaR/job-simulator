@@ -1,0 +1,422 @@
+/* تنظیمات کلی */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb; /* بک‌گراند روشن */
+    color: #2d3748; /* متن تیره */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+
+h1, h2, h3 {
+    font-family: 'Vazirmatn', sans-serif; /* فونت برای عناوین */
+    font-weight: 700; /* ضخامت فونت */
+}
+
+p, a, button {
+    font-family: 'Vazirmatn', sans-serif; /* فونت برای متن‌ها و لینک‌ها */
+    font-weight: 400; /* ضخامت فونت */
+}
+
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* هدر */
+.header {
+    background: #ffffff; /* بک‌گراند سفید */
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* خط سایه */
+    position: sticky; /* هدر چسبنده */
+    top: 0;
+    z-index: 1000; /* هدر بالای همه‌چی باشه */
+    display: flex;
+    flex-direction: column; /* چینش عمودی */
+    align-items: center; /* وسط‌چین افقی */
+    justify-content: center; /* وسط‌چین عمودی */
+    height: 120px; /* ارتفاع هدر */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* متن وسط‌چین */
+}
+
+.logo {
+    margin-bottom: 1rem; /* فاصله‌ی بین لوگو و منو */
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3182ce; /* آبی */
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* منو وسط‌چین */
+}
+
+.nav-link {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #2d3748;
+}
+
+/* بخش معرفی */
+.hero {
+    background: #ffffff; /* بک‌گراند سفید */
+    text-align: center;
+    padding: 4rem 0;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #4a5568;
+}
+
+.hero-button {
+    background: #3182ce; /* آبی */
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background: #2c5282; /* آبی تیره */
+}
+
+/* بخش امکانات */
+.features {
+    padding: 4rem 0;
+}
+
+.features-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2d3748;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: #ffffff; /* بک‌گراند سفید */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #3182ce; /* آبی */
+    margin-bottom: 1rem;
+}
+
+.feature-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #2d3748;
+}
+
+.feature-card-text {
+    color: #4a5568;
+}
+
+/* بخش نظرات کاربران */
+.testimonials {
+    padding: 4rem 0;
+}
+
+.testimonials-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2d3748;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: #ffffff; /* بک‌گراند سفید */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    text-align: right;
+    color: #2d3748;
+}
+
+/* فوتر */
+.footer {
+    background: #2d3748; /* خاکستری تیره */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+
+/* لوگو با تصویر */
+.logo-image {
+    height: 40px; /* ارتفاع لوگو */
+    width: auto; /* عرض خودکار */
+}
+
+/* استایل دکمه‌های ورود و ثبت‌نام در بخش Hero */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.hero-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3182ce;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #2c5282;
+}
+
+
+
+
+/* استایل دکمه‌های ورود و ثبت‌نام */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.auth-button {
+    padding: 0.5rem 1rem;
+    background-color: #3182ce;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.auth-button:hover {
+    background-color: #2c5282;
+}
+
+/* استایل پنل کاربری */
+.user-panel {
+    position: relative;
+    display: none;
+}
+
+.user-panel i {
+    font-size: 1.5rem;
+    color: #3182ce;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.user-panel i:hover {
+    color: #2c5282;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem;
+    width: 150px;
+}
+
+.user-menu a {
+    display: block;
+    color: #2d3748;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.user-menu a:hover {
+    color: #3182ce;
+}
+
+/* استایل هدر */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* استایل لوگو */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3182ce;
+    text-decoration: none;
+}
+
+/* استایل منوی ناوبری */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #2d3748;
+}
+
+/* استایل دکمه‌های ورود و ثبت‌نام */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.auth-button {
+    padding: 0.5rem 1rem;
+    background-color: #3182ce;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.auth-button:hover {
+    background-color: #2c5282;
+}
+
+/* استایل پنل کاربری */
+.user-panel {
+    position: relative;
+    display: none;
+}
+
+.user-panel i {
+    font-size: 1.5rem;
+    color: #3182ce;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.user-panel i:hover {
+    color: #2c5282;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem;
+    width: 150px;
+}
+
+.user-menu a {
+    display: block;
+    color: #2d3748;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.user-menu a:hover {
+    color: #3182ce;
+}

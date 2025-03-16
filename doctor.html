@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پزشک عمومی - شبیه‌ساز مشاغل</title>
+    <link rel="stylesheet" href="css/doctor.css">
+<script src="js/doctor.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">شبیه‌ساز مشاغل</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش جزئیات شغل -->
+    <section class="career-details">
+        <div class="container">
+            <h2 class="career-details-title">پزشک عمومی</h2>
+            <div class="career-details-content">
+                <div class="career-details-image">
+                    <img src="assets/images/doctor.jpg" alt="پزشک عمومی">
+                </div>
+                <div class="career-details-info">
+                    <h3>توضیحات شغل</h3>
+                    <p>پزشک عمومی یکی از مشاغل پرطرفدار در حوزه سلامت است. این شغل شامل تشخیص و درمان بیماری‌ها، تجویز دارو و ارائه مراقبت‌های اولیه به بیماران است.</p>
+                    <h3>مهارت‌های مورد نیاز</h3>
+                    <ul>
+                        <li>توانایی تشخیص بیماری‌ها</li>
+                        <li>مهارت‌های ارتباطی قوی</li>
+                        <li>توانایی کار تحت فشار</li>
+                    </ul>
+                    <h3>حقوق و دستمزد</h3>
+                    <p>حقوق یک پزشک عمومی معمولاً بین ۱۰ تا ۲۰ میلیون تومان در ماه است.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش شبیه‌سازی -->
+    <section class="simulation">
+        <div class="container">
+            <h2 class="simulation-title">شبیه‌سازی شغل</h2>
+            <div class="simulation-content">
+                <p>یه سناریوی تشخیص بیماری بهت داده می‌شه. علائم رو بررسی کن و تشخیص بده:</p>
+                <div class="challenge">
+                    <h3>چالش: تشخیص بیماری</h3>
+                    <p>بیمار با علائم زیر مراجعه کرده:</p>
+                    <ul>
+                        <li>تب بالا</li>
+                        <li>سرفه خشک</li>
+                        <li>خستگی شدید</li>
+                    </ul>
+                    <label for="diagnosis">تشخیص شما:</label>
+                    <input type="text" id="diagnosis" placeholder="تشخیص خودت رو بنویس...">
+                    <button onclick="checkDiagnosis()">بررسی</button>
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function checkDiagnosis() {
+            const diagnosis = document.getElementById('diagnosis').value.toLowerCase();
+            if (diagnosis.includes("آنفولانزا") || diagnosis.includes("سرما خوردگی") || diagnosis.includes("انفولانزا")) {
+                document.getElementById('result').textContent = "آفرین! تشخیص درست بود.";
+            } else {
+                document.getElementById('result').textContent = "تشخیص اشتباهه. دوباره تلاش کن!";
+            }
+        }
+    </script>
+</body>
+</html>

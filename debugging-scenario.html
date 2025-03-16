@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رفع باگ - مهندس نرم‌افزار</title>
+    <link rel="stylesheet" href="css/debugging-scenario.css">
+    <script src="JavaScript/debugging-scenario.js"></script>
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">شبیه‌ساز مشاغل</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش آموزش -->
+    <section class="tutorial">
+        <div class="container">
+            <h2 class="tutorial-title">آموزش رفع باگ</h2>
+            <div class="tutorial-content">
+                <p>باگ یک خطا در کد است که باعث می‌شود برنامه به‌درستی کار نکند. برای رفع باگ، باید خطای موجود در کد را پیدا کرده و آن را اصلاح کنید.</p>
+                <p>مثال: در کد زیر، عملگر اشتباه استفاده شده است. به جای تفریق، باید جمع انجام شود.</p>
+                <pre>
+function add(a, b) {
+    return a - b; // باگ: باید جمع شود، نه تفریق!
+}
+                </pre>
+                <button id="startDebugging" class="tutorial-button">شروع رفع باگ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش رفع باگ -->
+    <section class="debugging" style="display: none;">
+        <div class="container">
+            <h2 class="debugging-title">رفع باگ</h2>
+            <div class="debugging-content">
+                <p>کد زیر دارای یک باگ است. آن را پیدا کرده و رفع کنید:</p>
+                <pre id="buggyCode">
+function add(a, b) {
+    return a - b; // باگ: باید جمع شود، نه تفریق!
+}
+                </pre>
+                <textarea id="fixedCode" rows="5" placeholder="کد اصلاح‌شده خود را اینجا بنویسید..."></textarea>
+                <button id="submitFix" class="debugging-button">ارسال کد اصلاح‌شده</button>
+                <pre id="debugOutput"></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/debugging.js"></script>
+</body>
+</html>

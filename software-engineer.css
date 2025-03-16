@@ -1,0 +1,231 @@
+/* تنظیمات کلی */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    color: #2d3748;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 700;
+}
+
+p, a, button {
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 400;
+}
+
+/* هدر */
+.header {
+    background: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 1rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3182ce;
+    text-decoration: none;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.nav-link {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #2d3748;
+}
+
+/* بخش جزئیات شغل */
+.career-details {
+    padding: 4rem 0;
+}
+
+.career-details-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2d3748;
+    text-align: center;
+}
+
+.career-details-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.career-details-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.career-details-info {
+    flex: 1;
+}
+
+.career-details-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.career-details-info p {
+    font-size: 1.25rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.career-details-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.career-details-info ul li {
+    font-size: 1.25rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+/* بخش شبیه‌سازی */
+.simulation {
+    padding: 4rem 0;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.simulation-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+    text-align: center;
+}
+
+.simulation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.user-panel {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.user-panel h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.user-panel p {
+    font-size: 1.25rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+#increaseScoreBtn {
+    background: #3182ce;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 2rem;
+}
+
+#increaseScoreBtn:hover {
+    background: #2c5282;
+}
+
+.testimonials {
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.testimonial-card p {
+    font-size: 1.25rem;
+    color: #4a5568;
+}
+
+.simulation-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.simulation-button {
+    background: #3182ce;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.simulation-button:hover {
+    background: #2c5282;
+}
+
+/* فوتر */
+.footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer-text {
+    margin: 0;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی برنامه‌نویسی - مهندس نرم‌افزار</title>
+    <link rel="stylesheet" href="css/coding-game.css">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">شبیه‌ساز مشاغل</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش بازی برنامه‌نویسی -->
+    <section class="game">
+        <div class="container">
+            <h2 class="game-title">بازی برنامه‌نویسی</h2>
+            <div class="game-content">
+                <p>مرحله ۱: تابعی بنویسید که دو عدد را جمع کند.</p>
+                <textarea id="gameCode" rows="5" placeholder="کد خود را اینجا بنویسید..."></textarea>
+                <button id="runGame" class="game-button">اجرای کد</button>
+                <pre id="gameOutput"></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // اجرای کد بازی
+        document.getElementById('runGame').addEventListener('click', () => {
+            const code = document.getElementById('gameCode').value;
+            try {
+                const addFunction = eval(`(${code})`); // تبدیل کد به تابع
+                const result = addFunction(2, 3);
+                if (result === 5) {
+                    document.getElementById('gameOutput').textContent = "تبریک! مرحله ۱ با موفقیت تکمیل

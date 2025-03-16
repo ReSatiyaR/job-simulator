@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شبیه‌ساز مشاغل</title>
+    <script src="JavaScript/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">شبیه‌ساز مشاغل</h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+            <!-- بخش دکمه‌های ورود و ثبت‌نام -->
+            <div class="auth-buttons">
+                <!-- اگر کاربر وارد نشده باشد -->
+                <div id="guestPanel">
+                    <a href="login.html" class="auth-button">ورود</a>
+                    <a href="signup.html" class="auth-button">ثبت‌نام</a>
+                </div>
+                <!-- اگر کاربر وارد شده باشد -->
+                <div id="userPanel" class="user-panel">
+                    <a href="#" id="userAccount">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div id="userMenu" class="user-menu">
+                        <a href="profile.html" class="menu-link">پروفایل</a>
+                        <a href="settings.html" class="menu-link">تنظیمات</a>
+                        <a href="#" id="logout" class="menu-link">خروج</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش معرفی -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">به شبیه‌ساز مشاغل خوش آمدید!</h2>
+            <p class="hero-text">با انجام تست‌ها و بررسی مشاغل، بهترین انتخاب رو برای آینده‌ی خودت داشته باش.</p>
+        </div>
+    </section>
+
+    <!-- بخش امکانات -->
+    <section class="features">
+        <div class="container">
+            <h2 class="features-title">امکانات ما</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-user-check feature-icon"></i>
+                    <h3 class="feature-card-title">تست‌های شخصی‌سازی شده</h3>
+                    <p class="feature-card-text">با انجام تست‌ها، مشاغل مناسب خودت رو پیدا کن.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-briefcase feature-icon"></i>
+                    <h3 class="feature-card-title">اطلاعات جامع مشاغل</h3>
+                    <p class="feature-card-text">با جزئیات کامل درباره‌ی هر شغل آشنا شو.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap feature-icon"></i>
+                    <h3 class="feature-card-title">راهنمایی برای انتخاب رشته</h3>
+                    <p class="feature-card-text">با توجه به نتایج تست‌ها، بهترین رشته رو انتخاب کن.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش نظرات کاربران -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="testimonials-title">نظرات کاربران</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"این وب‌سایت به من کمک کرد تا بهترین شغل رو برای خودم انتخاب کنم. ممنون!"</p>
+                    <p class="testimonial-author">— علی</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"تست‌ها خیلی جالب بودن و نتایجشون واقعاً بهم کمک کرد."</p>
+                    <p class="testimonial-author">— سارا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // بررسی وضعیت ورود کاربر
+        const guestPanel = document.getElementById('guestPanel');
+        const userPanel = document.getElementById('userPanel');
+        const userMenu = document.getElementById('userMenu');
+        const logoutButton = document.getElementById('logout');
+
+        // اگر کاربر وارد سیستم شده باشد (مثلاً از localStorage بررسی می‌کنیم)
+        const isLoggedIn = localStorage.getItem('user') !== null;
+
+        if (isLoggedIn) {
+            // اگر کاربر وارد شده باشد، پنل کاربری نمایش داده می‌شود
+            guestPanel.style.display = 'none';
+            userPanel.style.display = 'block';
+        } else {
+            // اگر کاربر وارد نشده باشد، دکمه‌های ورود و ثبت‌نام نمایش داده می‌شود
+            guestPanel.style.display = 'block';
+            userPanel.style.display = 'none';
+        }
+
+        // نمایش منوی کاربری با کلیک روی آیکون کاربر
+        const userAccount = document.getElementById('userAccount');
+        userAccount.addEventListener('click', (e) => {
+            e.preventDefault();
+            userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // خروج کاربر
+        logoutButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('user'); // حذف اطلاعات کاربر
+            window.location.href = "index.html"; // هدایت به صفحه اصلی
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+<div class="user-panel">
+    <h2>پنل کاربری</h2>
+    <p>امتیاز شما: <span id="userScore">0</span></p>
+    <p>سطح شما: <span id="userLevel">تازه‌کار</span></p>
+</div>
+<button onclick="increaseScore(10)">انجام چالش (+10 امتیاز)</button>
+
+
+
+</body>
+</html>

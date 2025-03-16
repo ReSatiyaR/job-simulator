@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شبیه‌سازی محیط کار - مهندس نرم‌افزار</title>
+    <link rel="stylesheet" href="css/work-environment.css">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">شبیه‌ساز مشاغل</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش شبیه‌سازی محیط کار -->
+    <section class="work">
+        <div class="container">
+            <h2 class="work-title">شبیه‌سازی محیط کار</h2>
+            <div class="work-content">
+                <p>به محیط کار مجازی خوش آمدید! وظایف زیر را انجام دهید:</p>
+                <ul>
+                    <li>یک تابع برای جمع دو عدد بنویسید.</li>
+                    <li>یک تابع برای ضرب دو عدد بنویسید.</li>
+                </ul>
+                <textarea id="workCode" rows="10" placeholder="کد خود را اینجا بنویسید..."></textarea>
+                <button id="runWork" class="work-button">اجرای کد</button>
+                <pre id="workOutput"></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // اجرای کد محیط کار
+        document.getElementById('runWork').addEventListener('click', () => {
+            const code = document.getElementById('workCode').value;
+            try {
+                const result = eval(code); // اجرای کد (فقط برای نمونه، در پروژه واقعی از eval استفاده نکنید!)
+                document.getElementById('workOutput').textContent = `نتیجه: ${result}`;
+            } catch (error) {
+                document.getElementById('workOutput').textContent = `خطا: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

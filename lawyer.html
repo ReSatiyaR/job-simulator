@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وکیل - شبیه‌ساز مشاغل</title>
+    <link rel="stylesheet" href="css/lawyer.css">
+<script src="js/lawyer.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">شبیه‌ساز مشاغل</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش جزئیات شغل -->
+    <section class="career-details">
+        <div class="container">
+            <h2 class="career-details-title">وکیل</h2>
+            <div class="career-details-content">
+                <div class="career-details-image">
+                    <img src="assets/images/lawyer.jpg" alt="وکیل">
+                </div>
+                <div class="career-details-info">
+                    <h3>توضیحات شغل</h3>
+                    <p>وکیل یکی از مشاغل پرطرفدار در حوزه حقوق است. این شغل شامل ارائه مشاوره حقوقی، دفاع از موکل در دادگاه و تنظیم قراردادها است.</p>
+                    <h3>مهارت‌های مورد نیاز</h3>
+                    <ul>
+                        <li>تسلط به قوانین</li>
+                        <li>مهارت‌های مذاکره</li>
+                        <li>توانایی تحلیل مسائل حقوقی</li>
+                    </ul>
+                    <h3>حقوق و دستمزد</h3>
+                    <p>حقوق یک وکیل معمولاً بین ۱۲ تا ۲۵ میلیون تومان در ماه است.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش شبیه‌سازی -->
+    <section class="simulation">
+        <div class="container">
+            <h2 class="simulation-title">شبیه‌سازی شغل</h2>
+            <div class="simulation-content">
+                <p>یه پرونده حقوقی بهت داده می‌شه. راه‌حل حقوقی ارائه بده:</p>
+                <div class="challenge">
+                    <h3>چالش: پرونده حقوقی</h3>
+                    <p>موکل شما ادعا می‌کنه که قراردادش نقض شده. چه راه‌حلی ارائه می‌دی؟</p>
+                    <textarea id="solution" placeholder="راه‌حل خودت رو بنویس..."></textarea>
+                    <button onclick="checkSolution()">بررسی</button>
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function checkSolution() {
+            const solution = document.getElementById('solution').value.toLowerCase();
+            if (solution.includes("شکایت") || solution.includes("دادگاه")) {
+                document.getElementById('result').textContent = "آفرین! راه‌حل درست بود.";
+            } else {
+                document.getElementById('result').textContent = "راه‌حل اشتباهه. دوباره تلاش کن!";
+            }
+        }
+    </script>
+</body>
+</html>

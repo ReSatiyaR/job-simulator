@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تکنسین IT - شبیه‌ساز مشاغل</title>
+    <link rel="stylesheet" href="css/it-technician.css">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">شبیه‌ساز مشاغل</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">خانه</a></li>
+                    <li><a href="careers.html" class="nav-link">مشاغل</a></li>
+                    <li><a href="tests.html" class="nav-link">تست‌ها</a></li>
+                    <li><a href="about.html" class="nav-link">درباره‌ی ما</a></li>
+                    <li><a href="contact.html" class="nav-link">تماس</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش جزئیات شغل -->
+    <section class="career-details">
+        <div class="container">
+            <h2 class="career-details-title">تکنسین IT</h2>
+            <div class="career-details-content">
+                <div class="career-details-image">
+                    <img src="assets/images/it-technician.jpg" alt="تکنسین IT">
+                </div>
+                <div class="career-details-info">
+                    <h3>توضیحات شغل</h3>
+                    <p>تکنسین IT یکی از مشاغل پرطرفدار در حوزه فناوری اطلاعات است. این شغل شامل پشتیبانی و نگهداری از سیستم‌های کامپیوتری و شبکه‌ها است.</p>
+                    <h3>مهارت‌های مورد نیاز</h3>
+                    <ul>
+                        <li>عیب‌یابی سخت‌افزار و نرم‌افزار</li>
+                        <li>آشنایی با شبکه‌های کامپیوتری</li>
+                        <li>توانایی کار تیمی</li>
+                    </ul>
+                    <h3>حقوق و دستمزد</h3>
+                    <p>حقوق یک تکنسین IT معمولاً بین ۸ تا ۱۵ میلیون تومان در ماه است.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش شبیه‌سازی -->
+    <section class="simulation">
+        <div class="container">
+            <h2 class="simulation-title">شبیه‌سازی شغل</h2>
+            <div class="simulation-content">
+                <p>یه مشکل فنی بهت داده می‌شه. مشکل رو بررسی کن و حلش کن:</p>
+                <div class="challenge">
+                    <h3>چالش: عیب‌یابی شبکه</h3>
+                    <p>کاربران از قطعی شبکه شکایت دارن. چه اقداماتی انجام می‌دی؟</p>
+                    <textarea id="solution" placeholder="راه‌حل خودت رو بنویس..."></textarea>
+                    <button onclick="checkSolution()">بررسی</button>
+                    <p id="result"></p>
+                </div>
+                <div class="mini-project">
+                    <h3>مینی‌پروژه: سیستم مدیریت شبکه</h3>
+                    <p>یک سیستم مدیریت شبکه ساده طراحی کن که شامل مدیریت کاربران و دستگاه‌ها باشه.</p>
+                    <textarea id="projectCode" rows="10" placeholder="کد خود را اینجا بنویسید..."></textarea>
+                    <button onclick="runProject()">اجرای کد</button>
+                    <pre id="projectOutput"></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Made By L❤️ve SatiyaR
+                <br>
+                تمامی حقوق محفوظ است. © 2025 شبیه‌ساز مشاغل
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // بررسی راه‌حل چالش
+        function checkSolution() {
+            const solution = document.getElementById('solution').value.toLowerCase();
+            if (solution.includes("روتر") || solution.includes("کابل")) {
+                document.getElementById('result').textContent = "آفرین! راه‌حل درست بود.";
+            } else {
+                document.getElementById('result').textContent = "راه‌حل اشتباهه. دوباره تلاش کن!";
+            }
+        }
+
+        // اجرای مینی‌پروژه
+        function runProject() {
+            const code = document.getElementById('projectCode').value;
+            try {
+                const result = eval(code); // اجرای کد (فقط برای نمونه، در پروژه واقعی از eval استفاده نکنید!)
+                document.getElementById('projectOutput').textContent = `نتیجه: ${result}`;
+            } catch (error) {
+                document.getElementById('projectOutput').textContent = `خطا: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
